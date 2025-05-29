@@ -1,1 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PEF Mehran Chapter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        
+        header {
+            background-color: #001f3f;
+            color: white;
+            padding: 20px 20px 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo-left,
+        .logo-right {
+            position: absolute;
+            top: 20px;
+            width: 90px;
+            height: 85px;
+        }
+        
+        .logo-left {
+            left: 20px;
+        }
+        
+        .logo-right {
+            right: 20px;
+        }
+        
+        nav {
+            background-color: #7f0000;
+            text-align: center;
+            padding: 12px 0;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+        
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #001f3f;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        p,
+        li {
+            font-size: 16px;
+            color: #333;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        .mission-vision p {
+            background: #e8f0fe;
+            padding: 15px;
+            border-left: 5px solid #001f3f;
+            border-radius: 8px;
+        }
+        
+        #events ul li,
+        #activities ul li {
+            background: #fff7e6;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid #7f0000;
+            border-radius: 5px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        .team-member img {
+            width: 140px;
+            height: 140px;
+            border-radius: 10px;
+            object-fit: contain;
+            border: 3px solid #001f3f;
+            margin-bottom: 12px;
+            background-color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+        
+        .team-member strong {
+            display: block;
+            font-size: 18px;
+            color: #001f3f;
+            margin-bottom: 4px;
+        }
+        
+        .team-member span {
+            font-size: 14px;
+            color: #555;
+            display: block;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .contact-form button {
+            background-color: #001f3f;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background-color: #003366;
+        }
+        
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg.jpg" alt="Left Logo" class="logo-left" />
+        <img src="download (5).png" alt="Right Logo" class="logo-right" />
+        <h1>Pakistan Engineers Forum (PEF) - Mehran Chapter</h1>
+        <p style="color: white;">Connecting Engineers, Inspiring Futures</p>
+    </header>
+
+    <nav>
+        <a href="#mission">Mission & Vision</a>
+        <a href="#events">Events</a>
+        <a href="#team">Team</a>
+        <a href="#activities">Activities</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="mission">
+        <h2>Our Mission & Vision</h2>
+        <div class="mission-vision">
+            <p><strong>Mission:</strong> To empower engineering students and graduates through mentorship, skill development, and exposure to real-world opportunities.</p>
+            <p><strong>Vision:</strong> To become a premier platform that bridges the gap between academia and industry, enabling students to secure internships, jobs, and a brighter future.</p>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>📢 Technical Seminar on Sustainable Engineering - June 15, 2025</li>
+            <li>🤝 Annual Meetup & Networking Dinner - July 20, 2025</li>
+            <li>🧠 Workshop: Future of AI in Engineering - August 10, 2025</li>
+        </ul>
+    </section>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/president.jpg" alt="Ali Raza Mugheri" />
+                <strong>Ali Raza Mugheri</strong>
+                <span>President</span>
+            </div>
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/senior_vice_president.jpg" alt="Zohaib Ahmed Maha" />
+                <strong>Zohaib Ahmed Maha</strong>
+                <span>Senior Vice President</span>
+            </div>
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/vice_president.jpg" alt="Abdul Samad Sipio" />
+                <strong>Abdul Samad Sipio</strong>
+                <span>Vice President</span>
+            </div>
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/general_secretary.jpg" alt="Waris Shaikh" />
+                <strong>Waris Shaikh</strong>
+                <span>General Secretary</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <h2>Chapter Activities</h2>
+        <ul>
+            <li>🔧 Workshops and Seminars on Emerging Technologies</li>
+            <li>🏭 Industry Visits and Field Trips</li>
+            <li>🎓 Career Guidance and Mentorship Programs</li>
+            <li>👥 Social and Networking Events for Professional Growth</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:pefmuet@gmail.com">pefmuet@gmail.com</a><br /> Phone: 0325 3433270<br /> Location: Mehran University of Engineering and Technology, Jamshoro</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 PEF Mehran Chapter. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
