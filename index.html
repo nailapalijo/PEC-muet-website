@@ -11,7 +11,7 @@
             margin: 0;
             background-color: #f2f2f2;
         }
-        
+
         header {
             background-color: #001f3f;
             color: white;
@@ -19,7 +19,7 @@
             text-align: center;
             position: relative;
         }
-        
+
         .logo-left,
         .logo-right {
             position: absolute;
@@ -27,21 +27,21 @@
             width: 90px;
             height: 85px;
         }
-        
+
         .logo-left {
             left: 20px;
         }
-        
+
         .logo-right {
             right: 20px;
         }
-        
+
         nav {
             background-color: #7f0000;
             text-align: center;
             padding: 12px 0;
         }
-        
+
         nav a {
             color: white;
             margin: 0 15px;
@@ -49,12 +49,12 @@
             font-weight: 600;
             transition: color 0.3s;
         }
-        
+
         nav a:hover {
             text-decoration: underline;
             color: #ffcc00;
         }
-        
+
         section {
             max-width: 1000px;
             margin: 30px auto;
@@ -63,30 +63,30 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         h2 {
             color: #001f3f;
             margin-bottom: 15px;
             text-align: center;
         }
-        
+
         p,
         li {
             font-size: 16px;
             color: #333;
         }
-        
+
         ul {
             padding-left: 20px;
         }
-        
+
         .mission-vision p {
             background: #e8f0fe;
             padding: 15px;
             border-left: 5px solid #001f3f;
             border-radius: 8px;
         }
-        
+
         #events ul li,
         #activities ul li {
             background: #fff7e6;
@@ -95,14 +95,14 @@
             border-left: 5px solid #7f0000;
             border-radius: 5px;
         }
-        
+
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
             margin-top: 50px;
         }
-        
+
         .team-member {
             text-align: center;
             padding: 20px;
@@ -111,12 +111,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .team-member:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
-        
+
         .team-member img {
             width: 140px;
             height: 140px;
@@ -127,24 +127,24 @@
             background-color: white;
             transition: transform 0.3s ease;
         }
-        
+
         .team-member img:hover {
             transform: scale(1.1);
         }
-        
+
         .team-member strong {
             display: block;
             font-size: 18px;
             color: #001f3f;
             margin-bottom: 4px;
         }
-        
+
         .team-member span {
             font-size: 14px;
             color: #555;
             display: block;
         }
-        
+
         .contact-form input,
         .contact-form textarea {
             width: 100%;
@@ -153,7 +153,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        
+
         .contact-form button {
             background-color: #001f3f;
             color: white;
@@ -164,11 +164,11 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-        
+
         .contact-form button:hover {
             background-color: #003366;
         }
-        
+
         footer {
             background-color: #001f3f;
             color: white;
@@ -176,10 +176,43 @@
             padding: 20px;
             margin-top: 30px;
         }
-        
+
+        /* ✅ Mobile Responsiveness */
         @media (max-width: 768px) {
             .team-grid {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            .logo-left,
+            .logo-right {
+                width: 60px;
+                height: 60px;
+                top: 10px;
+            }
+
+            section {
+                padding: 20px 15px;
+            }
+
+            .team-member img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
             }
         }
     </style>
@@ -187,7 +220,9 @@
 
 <body>
     <header>
+        <!-- ✅ Suggestion: Compress this image using https://squoosh.app -->
         <img src="logo.jpg.jpg" alt="Left Logo" class="logo-left" />
+        <!-- ✅ Suggestion: Compress this image using https://tinypng.com -->
         <img src="download (5).png" alt="Right Logo" class="logo-right" />
         <h1>Pakistan Engineers Forum (PEF) - Mehran Chapter</h1>
         <p style="color: white;">Connecting Engineers, Inspiring Futures</p>
