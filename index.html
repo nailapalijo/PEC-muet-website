@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PEF Mehran Chapter</title>
+  <meta http-equiv="Cache-Control" content="max-age=31536000" />
   <style>
     * {
       scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
       background-color: #f2f2f2;
+      line-height: 1.6;
     }
 
     header {
       background-color: #001f3f;
       color: white;
-      padding: 20px 20px 40px;
+      padding: 20px;
       text-align: center;
       position: relative;
-      animation: fadeIn 1s ease-in;
     }
 
     .logo-left,
@@ -44,7 +46,7 @@
     nav {
       background-color: #7f0000;
       text-align: center;
-      padding: 12px 0;
+      padding: 10px;
       position: sticky;
       top: 0;
       z-index: 999;
@@ -55,11 +57,9 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
       color: #ffcc00;
     }
 
@@ -67,22 +67,21 @@
       max-width: 1000px;
       margin: 30px auto;
       background-color: white;
-      padding: 30px;
+      padding: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-in;
     }
 
     h2 {
       color: #001f3f;
-      margin-bottom: 15px;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     p,
     li {
-      font-size: 16px;
       color: #333;
+      font-size: 16px;
     }
 
     ul {
@@ -103,19 +102,13 @@
       padding: 10px;
       border-left: 5px solid #7f0000;
       border-radius: 5px;
-      transition: transform 0.3s;
-    }
-
-    #events ul li:hover,
-    #activities ul li:hover {
-      transform: scale(1.02);
     }
 
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 25px;
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
     .team-member {
@@ -124,40 +117,27 @@
       background-color: #f9f9f9;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .team-member:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     }
 
     .team-member img {
       width: 140px;
       height: 140px;
       border-radius: 10px;
-      object-fit: contain;
+      object-fit: cover;
       border: 3px solid #001f3f;
       margin-bottom: 12px;
       background-color: white;
-      transition: transform 0.3s ease;
-    }
-
-    .team-member img:hover {
-      transform: scale(1.1);
     }
 
     .team-member strong {
       display: block;
       font-size: 18px;
       color: #001f3f;
-      margin-bottom: 4px;
     }
 
     .team-member span {
       font-size: 14px;
       color: #555;
-      display: block;
     }
 
     .contact-form input,
@@ -167,14 +147,6 @@
       margin-top: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      font-size: 15px;
-      transition: border 0.3s;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: #001f3f;
     }
 
     .contact-form button {
@@ -185,12 +157,6 @@
       margin-top: 10px;
       cursor: pointer;
       border-radius: 5px;
-      font-size: 15px;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact-form button:hover {
-      background-color: #003366;
     }
 
     footer {
@@ -210,12 +176,6 @@
         display: block;
         margin: 8px 0;
       }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 20px;
-      }
 
       .logo-left,
       .logo-right {
@@ -224,30 +184,15 @@
         top: 10px;
       }
 
-      section {
-        padding: 20px 15px;
-      }
-
-      .team-member img {
-        width: 100px;
-        height: 100px;
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        font-size: 14px;
+      header h1 {
+        font-size: 20px;
       }
     }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
       }
     }
   </style>
@@ -255,10 +200,10 @@
 
 <body>
   <header>
-    <img src="logo.jpg.jpg" alt="Left Logo" class="logo-left" />
-    <img src="download (5).png" alt="Right Logo" class="logo-right" />
+    <img src="logo-left.webp" alt="Left Logo" class="logo-left" loading="lazy" width="90" height="85" />
+    <img src="logo-right.webp" alt="Right Logo" class="logo-right" loading="lazy" width="90" height="85" />
     <h1>Pakistan Engineers Forum (PEF) - Mehran Chapter</h1>
-    <p style="color: white;">Connecting Engineers, Inspiring Futures</p>
+    <p>Connecting Engineers, Inspiring Futures</p>
   </header>
 
   <nav>
@@ -290,22 +235,22 @@
     <h2>Our Team</h2>
     <div class="team-grid">
       <div class="team-member">
-        <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/president.jpg" alt="Ali Raza Mugheri" />
+        <img src="president.webp" alt="Ali Raza Mugheri" loading="lazy" width="140" height="140" />
         <strong>Ali Raza Mugheri</strong>
         <span>President</span>
       </div>
       <div class="team-member">
-        <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/senior_vice_president.jpg" alt="Zohaib Ahmed Maha" />
+        <img src="senior_vice_president.webp" alt="Zohaib Ahmed Maha" loading="lazy" width="140" height="140" />
         <strong>Zohaib Ahmed Maha</strong>
         <span>Senior Vice President</span>
       </div>
       <div class="team-member">
-        <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/vice_president.jpg" alt="Abdul Samad Sipio" />
+        <img src="vice_president.webp" alt="Abdul Samad Sipio" loading="lazy" width="140" height="140" />
         <strong>Abdul Samad Sipio</strong>
         <span>Vice President</span>
       </div>
       <div class="team-member">
-        <img src="https://raw.githubusercontent.com/nailapalijo/PEC-muet-website/main/general_secretary.jpg" alt="Waris Shaikh" />
+        <img src="general_secretary.webp" alt="Waris Shaikh" loading="lazy" width="140" height="140" />
         <strong>Waris Shaikh</strong>
         <span>General Secretary</span>
       </div>
@@ -324,7 +269,9 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:pefmuet@gmail.com">pefmuet@gmail.com</a><br /> Phone: 0325 3433270<br /> Location: Mehran University of Engineering and Technology, Jamshoro</p>
+    <p>Email: <a href="mailto:pefmuet@gmail.com">pefmuet@gmail.com</a><br />
+       Phone: 0325 3433270<br />
+       Location: Mehran University of Engineering and Technology, Jamshoro</p>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
@@ -337,5 +284,4 @@
     <p>&copy; 2025 PEF Mehran Chapter. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
