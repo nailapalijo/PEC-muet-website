@@ -32,6 +32,8 @@
     .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:#001f3f}
     .contact-form button{background:#001f3f;color:#fff;padding:.75rem 1.5rem;border:none;margin-top:.625rem;cursor:pointer;border-radius:5px;font-size:1rem;transition:background .3s ease}
     .contact-form button:hover{background:#003366}
+    #news ul li{background:#e6f7ff;margin-bottom:.625rem;padding:.625rem;border-left:5px solid #0074cc;border-radius:5px;transition:transform .3s}
+    #news ul li:hover{transform:scale(1.02)}
     footer{background:#001f3f;color:#fff;text-align:center;padding:1rem;margin-top:2rem}
     @media(max-width:768px){
       .team-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
@@ -58,6 +60,7 @@
     <a href="#events">Events</a>
     <a href="#team">Team</a>
     <a href="#activities">Activities</a>
+    <a href="#news">News</a>
     <a href="#contact">Contact</a>
   </nav>
   <section id="mission">
@@ -109,16 +112,27 @@
       <li>👥 Social and Networking Events for Professional Growth</li>
     </ul>
   </section>
+
+  <section id="news">
+    <h2>News & Updates</h2>
+    <ul>
+      <li><strong>May 2025:</strong> PEF Mehran Chapter launched a new mentorship initiative.</li>
+      <li><strong>April 2025:</strong> Successful completion of Annual General Meeting.</li>
+      <li><strong>March 2025:</strong> Added new internship opportunities for engineering students.</li>
+    </ul>
+  </section>
+
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:pefmuet@gmail.com">pefmuet@gmail.com</a><br /> Phone: 0325 3433270<br /> Location: Mehran University of Engineering and Technology, Jamshoro</p>
     <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">📩 Send Message</button>
     </form>
   </section>
+
   <footer>
     <p>&copy; 2025 PEF Mehran Chapter. All rights reserved.</p>
   </footer>
